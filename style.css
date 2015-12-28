@@ -8,6 +8,9 @@ padding:0;
 
 }
 
+.clearfix {
+  overflow: auto;
+}
 
 * {
 	box-sizing: border-box;
@@ -60,9 +63,6 @@ p {
 	padding-left: 10px;
 	padding-right: 10px;
 }
-	
-		 
-	}
 
 .nav, 
 .bio {
@@ -98,6 +98,14 @@ p {
 	}
 
 
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 /* ================================= 
   Media Queries
 ==================================== */
@@ -128,107 +136,109 @@ p {
 /*Navigation Menus and Profile Picture*/
 
 
-.main-nav-nav { 
-	font-weight: bold;
-	padding-right: 30px;
-	display: inline-block;
-	text-align: center;
-	}
-
-.main-nav li {
-	float: left;
-	padding: 10px;
-	margin: 10px;
-}
-
-
-
-.bio {
-	width: 100%
-	float: right;
-}
-
-.bio_text {
-	width: 50%;
-	display: inline-block;
-}
-
-	.main-nav {
+	.main-nav-nav { 
+		font-weight: bold;
+		padding-right: 30px;
 		display: inline-block;
 		text-align: center;
-		margin-bottom: 10px;
-		margin-top: -20px;
-	}
+		}
 
-
-
-/*Cols*/
-	.name,
-	.col {
+	.main-nav li {
 		float: left;
-	}
-
-	.marketing,
-	.search_page {
-		width: 50%;
 		padding: 10px;
-		float: left;
+		margin: 10px;
 	}
 
-	.travelApp,
-	.map {
-		width: 50%;
-		padding: 10px;
-		float: left;
+
+
+	.bio {
+		width: 100%
+		float: right;
 	}
 
-	.photoGallery {
-		width: 50%;
-		display: block;
-		display: inline-block;
-		float: left;
-		padding-right: 10px;
-	}
-
-	.calculator {
+	.bio_text {
 		width: 50%;
 		display: inline-block;
-		padding-left: 10px;
 	}
 
+		.main-nav {
+			display: inline-block;
+			text-align: center;
+			margin-bottom: 10px;
+			margin-top: -20px;
+		}
 
-.contact_info {
-	padding-left: 150px;
-	padding-right: 150px;
-}
 
-/*Footer*/
+	/*Cols*/
+		.name,
+		.col {
+			float: left;
+		}
 
-.foot-nav { 
-	font-weight: bold;
-	float: right;
-	padding-right: 30px;
-	display: inline-block;
+		.marketing,
+		.search_page {
+			width: 50%;
+			padding: 10px;
+			float: left;
+		}
+
+		.travelApp,
+		.map {
+			width: 50%;
+			padding: 10px;
+			float: left;
+		}
+
+		.photoGallery {
+			width: 50%;
+			display: block;
+			display: inline-block;
+			float: left;
+			padding-right: 10px;
+		}
+
+		.calculator {
+			width: 50%;
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+
+	.contact_info {
+		padding-left: 150px;
+		padding-right: 150px;
 	}
 
-.foot-nav li {
-	float: left;
-	padding: 10px;
-	margin: 10px;
+	/*Footer*/
+
+	.foot-nav { 
+		font-weight: bold;
+		float: right;
+		padding-right: 30px;
+		display: inline-block;
+		}
+
+	.foot-nav li {
+		float: left;
+		padding: 10px;
+		margin: 10px;
+	}
+
+	.studentNameFooter {
+		display: inline-block;
+		float: left;
+		font-weight: bold;
+	}
+
+	.smallFooter {
+		display: none;
+		visibility: hidden;
+
+
+	}
+
 }
 
-.studentNameFooter {
-	display: inline-block;
-	float: left;
-	font-weight: bold;
-}
-
-.smallFooter {
-	display: none;
-	visibility: hidden;
-
-
-}
 
 @media (min-width: 1025px) {
 	
@@ -240,22 +250,25 @@ p {
 		float: left;
 	}
 
+
+
+/*.largePage2 .clearfix {
+	 content: "largePage2"; display: table; clear: both; 
+}*/
+
 .map,
 .photoGallery,
 .calculator {
 		width: 33%;
 		padding: 10px;
 		float: left;
-	}
-.photoGallery,
-.calculator {
-	float: left;
 }
 
+
+
 .contact_info {
-	position: absolute;
-	margin-top: 85%;
-	
+	clear: both;
+
 }
 
 	
