@@ -17,6 +17,10 @@ padding:0;
 	/*background-color: white;*/
 }
 
+img {
+	border-radius: 22px;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: lighter;
